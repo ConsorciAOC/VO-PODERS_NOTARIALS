@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<xs:schema targetNamespace="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="DatosEspecificos" type="xs:anyType"/>
+</xs:schema>

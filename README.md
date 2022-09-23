@@ -29,37 +29,37 @@
 
 **Índex**
 
-[1Introducció 1](# __RefHeading___ Toc519669347)
+- [1. Introducció 1](#1)
 
-[2Transmissions de dades disponibles 1](# __RefHeading___ Toc519669348)
+- [2. Transmissions de dades disponibles](#2)
 
-[3Missatgeria dels serveis 1](# __RefHeading___ Toc519669349)
+- [3. Missatgeria dels serveis](#3)
 
-[3.1Consulta de subsistència d'administradors d'una societat (SUBSISTENCIA\_ADMINISTRADORS) 1](# __RefHeading___ Toc519669350)
+    * [3.1 Consulta de subsistència d'administradors d'una societat (SUBSISTENCIA\_ADMINISTRADORS)](#3.1)
 
-[3.1.1Petició – dades específiques 1](# __RefHeading___ Toc519669351)
+       * [3.1.1 Petició – dades específiques](#3.1.1)
 
-[3.1.2Resposta – dades específiques 3](# __RefHeading___ Toc519669352)
+       * [3.1.2 Resposta – dades específiques](#3.1.2)
 
-[3.2Consulta de subsistència de poders notarials (SUBSISTENCIA\_PODERS) 7](# __RefHeading___ Toc519669353)
+    * [3.2 Consulta de subsistència de poders notarials (SUBSISTENCIA\_PODERS)](#3.2)
 
-[3.2.1Petició – dades específiques 7](# __RefHeading___ Toc519669354)
+       * [3.2.1 Petició – dades específiques](#3.2.1)
 
-[3.2.2Resposta – dades específiques 8](# __RefHeading___ Toc519669355)
+       * [3.2.2 Resposta – dades específiques](#3.2.2)
 
-[3.3Consulta de subsistència de còpia simple de poder notarial (COPIA\_SIMPLE) 12](# __RefHeading___ Toc519669356)
+    * [3.3 Consulta de subsistència de còpia simple de poder notarial (COPIA\_SIMPLE)](#3.3)
 
-[3.3.1Petició – dades específiques 12](# __RefHeading___ Toc519669357)
+       * [3.3.1 Petició – dades específiques](#3.3.1)
 
-[3.3.2Resposta – dades específiques 12](# __RefHeading___ Toc519669358)
+       * [3.3.2 Resposta – dades específiques](#3.3.2)
 
-[3.4Consulta de notaris i notaries (CONSULTA\_NOTARIS) 14](# __RefHeading___ Toc519669359)
+    * [3.4 Consulta de notaris i notaries (CONSULTA\_NOTARIS)](#3.4)
 
-[3.4.1Petició – dades específiques 14](# __RefHeading___ Toc519669360)
+       * [3.4.1 Petició – dades específiques](#3.4.1)
 
-[3.4.2Resposta – dades específiques 14](# __RefHeading___ Toc519669361)
+       * [3.4.2 Resposta – dades específiques](#3.4.2)
 
-# 1 Introducció
+# 1 Introducció <a name="1"></a>
 
 Aquest document detalla la missatgeria associada al servei de consulta d'informació del Registre Electrònic de Poders Notarials.
 
@@ -69,7 +69,7 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
  
 [PCI]:https://github.com/ConsorciAOC/PCI
 
-# 2 Transmissions de dades disponibles
+# 2 Transmissions de dades disponibles <a name="2"></a>
 
 Les dades disponibles a través del servei són les que es presenten a continuació:
 
@@ -84,13 +84,13 @@ Les dades disponibles a través del servei són les que es presenten a continuac
 | COPIA\_SIMPLE | Consulta de copies simples de poders notarials o documents que afectin a la subsistència d'un poder notarial. |
 | CONSULTA\_NOTARIS | Consulta de notaris i notaries. |
 
-# 3 Missatgeria dels serveis
+# 3 Missatgeria dels serveis <a name="3"></a>
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les modalitats de consum del producte DGT.
 
-## 3.1 Consulta de subsistència d'administradors d'una societat (SUBSISTENCIA\_ADMINISTRADORS)
+## 3.1 Consulta de subsistència d'administradors d'una societat (SUBSISTENCIA\_ADMINISTRADORS) <a name="3.1"></a>
 
-### 3.1.1 Petició – dades específiques
+### 3.1.1 Petició – dades específiques <a name="3.1.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -101,110 +101,60 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 | //idEscriptura/numBis | Número bis del protocol. |
 | //idEscriptura/dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD). |
 | peticioConsultaSubsistenciaAdministradors/alerta | Dades de contacte de la persona que realitza la consulta de la subsistència, per tal de notificar-li, en cas que n'hi hagin, modificacions que afectin a l'escriptura de nomenament consultada. |
-| //alerta/idAplicacio | Identificador de l'aplicació que realitza la consulta (identificador únic per cada organisme requeridor)
-# 1
-.
- |
-| //alerta/dataAvis | Data fins la que es desitja rebre alertes si hi ha cap canvi.
- |
-| //alerta/email | Correu electrònic on es desitja rebre alertes si hi ha cap canvi.
- |
-| //alerta/sms | Número de mòbil on es desitja rebre alertes si hi ha cap canvi.
- |
+| //alerta/idAplicacio | Identificador de l'aplicació que realitza la consulta (identificador únic per cada organisme requeridor) [1](#6). |
+| //alerta/dataAvis | Data fins la que es desitja rebre alertes si hi ha cap canvi. |
+| //alerta/email | Correu electrònic on es desitja rebre alertes si hi ha cap canvi. |
+| //alerta/sms | Número de mòbil on es desitja rebre alertes si hi ha cap canvi. |
 
-![](RackMultipart20220923-1-5cgqng_html_2b3857c4271dc0b1.gif)
+![1](captures/1.png)
 
-### 3.1.2Resposta – dades específiques
+ Per consultar el llistat d'alertes als que s'està subscrit, cal accedir al servei "Avísame" del MINHAP: <a name="6"></a>[https://avisame.redsara.es/gestorNotificaciones/services](https://avisame.redsara.es/gestorNotificaciones/services) 
 
-![](RackMultipart20220923-1-5cgqng_html_69d0feab01fec9d3.png)
+### 3.1.2 Resposta – dades específiques <a name="3.1.2"></a>
+
+![2](captures/2.png)
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| respostaConsultaSubsistenciaAdministradors/resposta | Bloc de dades corresponent a la resposta a la consulta.
- |
-| --- | --- |
+| respostaConsultaSubsistenciaAdministradors/resposta | Bloc de dades corresponent a la resposta a la consulta. |
 | //resposta/protocolConstitucio | Bloc de dades que conté els protocols de constitució de les societats per les quals apareixen administradors en l'escriptura de nomenament consultada.
-L'habitual és que l'escriptura de nomenament sigui relativa a una única societat però hi ha casos en els que la mateixa escriptura de nomenament es nomenen càrrecs de més d'una societat.
- |
-| //resposta/protocolConstitucio/dadesProtocol | Dades identificatives del protocol de constitució d'una societat. Vegeu apartat Protocol de societat3.1.2.1. |
-| //resposta/protocolConstitucio/estatAdministracio |
-- NO\_CANVIS\_POSTERIORS
-- CANVIS\_POSTERIORS
+L'habitual és que l'escriptura de nomenament sigui relativa a una única societat però hi ha casos en els que la mateixa escriptura de nomenament es nomenen càrrecs de més d'una societat. |
+| //resposta/protocolConstitucio/dadesProtocol | Dades identificatives del protocol de constitució d'una societat. Vegeu apartat Protocol de societat [3.1.2.1.](#3.1.2.1) |
+| //resposta/protocolConstitucio/estatAdministracio |- NO\_CANVIS\_POSTERIORS </br>- CANVIS\_POSTERIORS |
+| //resposta/documentRelacionat  | Bloc de dades que conté els documents de cessament, renúncia o nou atorgament posteriors al consultat, relacionats amb l'escriptura de constitució del mateix. Vegeu apartat Protocol de societat [3.1.2.1.](#3.1.2.1)  |
+| respostaConsultaSubsistenciaAdministradors/resultat/codiResultat | Codi de resultat de la consulta:</br>- 0003: existeixen dades d'administradors per un poder notarial.</br>- 0227: existeixen dades d'administradors per un poder notarial però no s'ha pogut donar d'alta la subscripció d'alerta.</br>- 5: protocol sense dades complertes relatives a l'administració de la societat. L'escriptura consultada correspon a una societat per la que el seu document de constitució ha estat signat amb anterioritat a la de recollida de la informació en l'índex, la qual cosa impossibilita donar informació complerta de l'estat de l'administració de la societat.</br>- 7: protocol no relatiu a una escriptura de nomenament. L'escriptura consultada té un número de protocol vàlid però no conté cap acte jurídic de nomenament de càrrec.</br>- 0502: error realitzant la consulta. |
+| respostaConsultaSubsistenciaAdministradors/resultat/descripcio | Descripció del resultat. |
 
- |
-| //resposta/documentRelacionat
- | Bloc de dades que conté els documents de cessament, renúncia o nou atorgament posteriors al consultat, relacionats amb l'escriptura de constitució del mateix. Vegeu apartat Protocol de societat3.1.2.1.
- |
-| respostaConsultaSubsistenciaAdministradors/resultat/codiResultat | Codi de resultat de la consulta:
-- 0003: existeixen dades d'administradors per un poder notarial.
-
-
-- 0227: existeixen dades d'administradors per un poder notarial però no s'ha pogut donar d'alta la subscripció d'alerta.
-
-
-- 5: protocol sense dades complertes relatives a l'administració de la societat. L'escriptura consultada correspon a una societat per la que el seu document de constitució ha estat signat amb anterioritat a la de recollida de la informació en l'índex, la qual cosa impossibilita donar informació complerta de l'estat de l'administració de la societat.
-
-
-- 7: protocol no relatiu a una escriptura de nomenament. L'escriptura consultada té un número de protocol vàlid però no conté cap acte jurídic de nomenament de càrrec.
-
-
-- 0502: error realitzant la consulta.
-
- |
-| respostaConsultaSubsistenciaAdministradors/resultat/descripcio
- | Descripció del resultat. |
-
-#### 3.1.2.1Protocol de societat
+#### 3.1.2.1 Protocol de societat <a name="3.1.2.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //codiNotari | Codi identificador del notari.
- |
-| --- | --- |
-| //notari | Dades del notari (NIF i nom i cognoms del notari).
- |
-| //codiNotaria | Codi identificador de la notaria.
- |
-| //notaria | Adreça de la notaria.
- |
-| //numProtocol | Número de protocol de l'escriptura.
- |
-| //numBis | Número bis del protocol.
- |
-| //dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD).
- |
-| //opes/ope | Dades sobre les operacions realitzades a la societat.
- |
-| //ope/acteJuridic
- | Acte jurídic segons el Índice Único Informatizado del Consejo General del Notariado.
- |
-| //ope/descripcioActeJuridic
- | Descripció de l'acte jurídic. |
+| //codiNotari | Codi identificador del notari. |
+| //notari | Dades del notari (NIF i nom i cognoms del notari). |
+| //codiNotaria | Codi identificador de la notaria. |
+| //notaria | Adreça de la notaria. |
+| //numProtocol | Número de protocol de l'escriptura. |
+| //numBis | Número bis del protocol. |
+| //dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD). |
+| //opes/ope | Dades sobre les operacions realitzades a la societat. |
+| //ope/acteJuridic | Acte jurídic segons el Índice Único Informatizado del Consejo General del Notariado. |
+| //ope/descripcioActeJuridic | Descripció de l'acte jurídic. |
 | //ope/administradors/administrador | Bloc que conté dades d'un administrador de la societat. |
-| //administrador/nif
- | Identificador fiscal de l'administrador. |
-| //administrador/nom
- | Nom de l'administrador. |
-| //administrador/cognom1
- | Primer cognom de l'administrador identificat per NIF o raó social en cas d'identificat per CIF.
- |
-| //administrador/cognom2
- | Segon cognom de l'administrador. |
-| //administrador/tipusAdministracio
- | Descripció del tipus d'administrador. |
-| //societat/cif
- | CIF de la societat. |
-| //societat/raoSocial
- | Raó social de la societat. |
+| //administrador/nif | Identificador fiscal de l'administrador. |
+| //administrador/nom | Nom de l'administrador. |
+| //administrador/cognom1 | Primer cognom de l'administrador identificat per NIF o raó social en cas d'identificat per CIF. |
+| //administrador/cognom2 | Segon cognom de l'administrador. |
+| //administrador/tipusAdministracio | Descripció del tipus d'administrador. |
+| //societat/cif | CIF de la societat. |
+| //societat/raoSocial | Raó social de la societat. |
 
-#### ![](RackMultipart20220923-1-5cgqng_html_e819f558550e1565.png)
+![3](captures/3.png)
 
-#### 3.1.2.2Descripció d'actes jurídics relatius a entitats amb personalitats jurídiques
+#### 3.1.2.2 Descripció d'actes jurídics relatius a entitats amb personalitats jurídiques
 
 | _Codi acte_ | _Descripció_ |
 | --- | --- |
 | 1901 | CONSTITUCIÓN DE SOCIEDAD CIVIL |
-| --- | --- |
 | 1902 | CONSTITUCIÓN DE SOCIEDAD AGRARIA DE TRANSFORMACIÓN 1903 CONSTITUCIÓN DE AGRUPACIÓN DE INTERÉS URBANÍSTICO, JUNTA DE COMPENSACIÓN O DE CUALQUIER OTRA ENTIDAD PARA UNA ACTUACIÓN URBANÍSTICA EN CURSO |
 | 1904 | AGRUPACIÓN DE INTERÉS ECONÓMICO 1905 ENTIDAD URBANÍSTICA COLABORADORA |
 | 1906 | CONSTITUCIÓN DE PARTIDO POLÍTICO 1907 CONSTITUCIÓN DE SINDICATO |
@@ -253,232 +203,103 @@ L'habitual és que l'escriptura de nomenament sigui relativa a una única societ
 | 1986 | APORTACIÓN A PATRIMONIO SOCIAL |
 | 1987 | LIQUIDACIÓN Y EXTINCIÓN DE SOCIEDAD SIN IDENTIFICACIÓN DE LOS SOCIOS |
 
-## 3.2Consulta de subsistència de poders notarials (SUBSISTENCIA\_PODERS)
+## 3.2 Consulta de subsistència de poders notarials (SUBSISTENCIA\_PODERS) <a name="3.2"></a>
 
-### 3.2.1Petició – dades específiques
-
-| _Element_ | _Descripció_ |
-| --- | --- |
-| peticioConsultaSubsistenciaPoders/apoderament/idEscriptura
- | Bloc de dades que conté les dades de l'escriptura d'apoderament.
- |
-| --- | --- |
-| //idEscriptura/codiNotari | Codi identificador del notari.
- |
-| //idEscriptura/codiNotaria | Codi identificador de la notaria.
- |
-| //idEscriptura/numProtocol | Número de protocol de l'escriptura.
- |
-| //idEscriptura/numBis | Número bis del protocol.
- |
-| //idEscriptura/dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD).
- |
-| peticioConsultaSubsistenciaPoders/apoderament/csv
- | Codi de verificació segur de l'escriptura d'apoderament. |
-| peticioConsultaSubsistenciaPoders/alerta | Dades de contacte de la persona que realitza la consulta de la subsistència, per tal de notificar-li, en cas que n'hi hagin, modificacions que afectin al poder consultat.
- |
-| //alerta/idAplicacio | Identificador de l'aplicació que realitza la consulta (identificador únic per cada organisme requeridor).
- |
-| //alerta/dataAvis | Data fins la que es desitja rebre alertes si hi ha cap canvi.
- |
-| //alerta/email | Correu electrònic on es desitja rebre alertes si hi ha cap canvi.
- |
-| //alerta/sms | Número de mòbil on es desitja rebre alertes si hi ha cap canvi.
- |
-
-![](RackMultipart20220923-1-5cgqng_html_32963e90199aed5a.png)
-
-|
-
-| ![](RackMultipart20220923-1-5cgqng_html_e0859da4ac8c0eca.png) | En el Índice Único Informatizado únicament es troben disponibles els poders autoritzats amb data posterior a l'1 de Gener del 2004 i les revocacions autoritzades amb data posterior a l'1 d'Octubre del 2010.
- |
-| --- | --- |
-
-
- |
-| --- |
-
-###
-
-### 3.2.2Resposta – dades específiques
-
-![](RackMultipart20220923-1-5cgqng_html_eef607a4d7c14984.png)
+### 3.2.1 Petició – dades específiques <a name="3.2.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| respostaConsultaSubsistenciaPoders/resposta
- | Bloc de dades corresponent a la resposta a la consulta. |
-| --- | --- |
-| //resposta/apoderament/idEscriptura
- | Dades de l'escriptura d'apoderament.
- |
-| //idEscriptura/codiNotari | Codi identificador del notari.
- |
-| //idEscriptura/notari | Dades del notari (NIF i nom i cognoms del notari).
- |
-| //idEscriptura/codiNotaria | Codi identificador de la notaria.
- |
-| //idEscriptura/notaria | Adreça de la notaria.
- |
-| //idEscriptura/numProtocol | Número de protocol de l'escriptura.
- |
-| //idEscriptura/numBis | Número bis del protocol.
- |
-| //idEscriptura/dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD).
- |
-| //resposta/apoderament/csv
- | Codi de verificació segur de l'escriptura d'apoderament. |
-| //resposta/apoderament/vigenciaPoder
- | Vigència del poder:
-- 1: subsistent
-- 2: parcialment revocat
-- 3: totalment revocat
+| peticioConsultaSubsistenciaPoders/apoderament/idEscriptura  | Bloc de dades que conté les dades de l'escriptura d'apoderament. |
+| //idEscriptura/codiNotari | Codi identificador del notari. |
+| //idEscriptura/codiNotaria | Codi identificador de la notaria. |
+| //idEscriptura/numProtocol | Número de protocol de l'escriptura. |
+| //idEscriptura/numBis | Número bis del protocol. |
+| //idEscriptura/dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD). |
+| peticioConsultaSubsistenciaPoders/apoderament/csv  | Codi de verificació segur de l'escriptura d'apoderament. |
+| peticioConsultaSubsistenciaPoders/alerta | Dades de contacte de la persona que realitza la consulta de la subsistència, per tal de notificar-li, en cas que n'hi hagin, modificacions que afectin al poder consultat. |
+| //alerta/idAplicacio | Identificador de l'aplicació que realitza la consulta (identificador únic per cada organisme requeridor). |
+| //alerta/dataAvis | Data fins la que es desitja rebre alertes si hi ha cap canvi. |
+| //alerta/email | Correu electrònic on es desitja rebre alertes si hi ha cap canvi. |
+| //alerta/sms | Número de mòbil on es desitja rebre alertes si hi ha cap canvi. |
 
- |
-| //resposta/protocol | Bloc de dades del protocol. Vegeu apartat 3.2.2.1.
- |
-| //protocol/csv
- | Codi segur de verificació. |
-| //protocol/codiNotari
- | Codi identificador del notari.
- |
-| //protocol/notari
- | Dades del notari (NIF i nom i cognoms del notari).
- |
-| //protocol/codiNotaria
- | Codi identificador de la notaria.
- |
-| //protocol/notaria
- | Adreça de la notaria.
- |
-| //protocol/numProtocol
- | Número de protocol de l'escriptura.
- |
-| //protocol/numBis
- | Número bis del protocol.
- |
-| //protocol/dataAutoritzacio
- | Data d'autorització de l'escriptura (AAAA-MM-DD).
- |
-| //protocol/acteJuridic
- | Acte jurídic segons el Índice Único Informatizado del Consejo General del Notariado.
- |
-| //protocol/descripcioActeJuridic
- | Descripció de l'acte jurídic. |
-| //protocol/apoderats/apoderats
- | Bloc de dades amb dades d'apoderats. Vegeu apartat 3.2.2.2.. |
-| //protocol/poderdants/poderdant
- | Bloc de dades amb dades de poderdants. Vegeu apartat 3.2.2.2.
- |
-| respostaConsultaSubsistenciaPoders/resultat/codiResultat | Codi de resultat de la consulta:
-- 0003: existeix el poder notarial.
+![4](captures/4.png)
 
 
-- 0227: existeix el poder notarial però no s'ha pogut donar d'alta la subscripció d'alerta.
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png)
+En el Índice Único Informatizado únicament es troben disponibles els poders autoritzats amb data posterior a l'1 de Gener del 2004 i les revocacions autoritzades amb data posterior a l'1 d'Octubre del 2010.
+ 
+### 3.2.2 Resposta – dades específiques <a name="3.2.2"></a>
 
-
-- 10: no existeix cap poder notarial amb les dades indicades.
-
-
-- 11: el poder notarial consultat correspon a una escriptura d'atorgament de poder però no es pot consultar la subsistència del mateix degut a l'antiguitat del document.
-
-Així, s'ha consultat un poder amb data d'autorització compresa entre l'1 de Gener de 2004 i l'1 d'Octubre de 2010, pel qual no es té enregistrada cap revocació i per tant només es pot indicar que es tracta d'una escriptura d'atorgament del poder però no la subsistència del mateix.
-
-- 0502: error realitzant la consulta.
-
- |
-| respostaConsultaSubsistenciaPoders/resultat/descripcio
- | Descripció del resultat. |
-
-#### 3.2.2.1Dades del protocol
+![5](captures/5.png)
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //protocol/csv
- | Codi segur de verificació. |
-| --- | --- |
-| //protocol/codiNotari
- | Codi identificador del notari.
- |
-| //protocol/notari
- | Dades del notari (NIF i nom i cognoms del notari).
- |
-| //protocol/codiNotaria
- | Codi identificador de la notaria.
- |
-| //protocol/notaria
- | Adreça de la notaria.
- |
-| //protocol/numProtocol
- | Número de protocol de l'escriptura.
- |
-| //protocol/numBis
- | Número bis del protocol.
- |
-| //protocol/dataAutoritzacio
- | Data d'autorització de l'escriptura (AAAA-MM-DD).
- |
-| //protocol/acteJuridic
- | Acte jurídic segons el Índice Único Informatizado del Consejo General del Notariado.
- |
-| //protocol/descripcioActeJuridic
- | Descripció de l'acte jurídic. |
-| //protocol/apoderats/apoderats
- | Bloc de dades amb dades d'apoderats. Vegeu apartat 3.2.2.1. |
-| //protocol/poderdants/poderdant
- | Bloc de dades amb dades de poderdants. Vegeu apartat 3.2.2.1
- |
+| respostaConsultaSubsistenciaPoders/resposta  | Bloc de dades corresponent a la resposta a la consulta. |
+| //resposta/apoderament/idEscriptura | Dades de l'escriptura d'apoderament. |
+| //idEscriptura/codiNotari | Codi identificador del notari. |
+| //idEscriptura/notari | Dades del notari (NIF i nom i cognoms del notari). |
+| //idEscriptura/codiNotaria | Codi identificador de la notaria. |
+| //idEscriptura/notaria | Adreça de la notaria. |
+| //idEscriptura/numProtocol | Número de protocol de l'escriptura. |
+| //idEscriptura/numBis | Número bis del protocol. |
+| //idEscriptura/dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD). |
+| //resposta/apoderament/csv | Codi de verificació segur de l'escriptura d'apoderament. |
+| //resposta/apoderament/vigenciaPoder | Vigència del poder: <br>- 1: subsistent<br>- 2: parcialment revocat<br>- 3: totalment revocat |
+| //resposta/protocol | Bloc de dades del protocol. Vegeu apartat [3.2.2.1.](#3.2.2.1) |
+| //protocol/csv | Codi segur de verificació. |
+| //protocol/codiNotari | Codi identificador del notari. |
+| //protocol/notari | Dades del notari (NIF i nom i cognoms del notari). |
+| //protocol/codiNotaria | Codi identificador de la notaria. |
+| //protocol/notaria | Adreça de la notaria. |
+| //protocol/numProtocol | Número de protocol de l'escriptura. |
+| //protocol/numBis | Número bis del protocol. |
+| //protocol/dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD). |
+| //protocol/acteJuridic | Acte jurídic segons el Índice Único Informatizado del Consejo General del Notariado. |
+| //protocol/descripcioActeJuridic | Descripció de l'acte jurídic. |
+| //protocol/apoderats/apoderats | Bloc de dades amb dades d'apoderats. Vegeu apartat [3.2.2.2.](#3.2.2.2)  |
+| //protocol/poderdants/poderdant | Bloc de dades amb dades de poderdants. Vegeu apartat [3.2.2.2.](#3.2.2.2) |
+| respostaConsultaSubsistenciaPoders/resultat/codiResultat | Codi de resultat de la consulta:<br>- 0003: existeix el poder notarial.<br>- 0227: existeix el poder notarial però no s'ha pogut donar d'alta la subscripció d'alerta.<br>- 10: no existeix cap poder notarial amb les dades indicades.<br>- 11: el poder notarial consultat correspon a una escriptura d'atorgament de poder però no es pot consultar la subsistència del mateix degut a l'antiguitat del document.<br>Així, s'ha consultat un poder amb data d'autorització compresa entre l'1 de Gener de 2004 i l'1 d'Octubre de 2010, pel qual no es té enregistrada cap revocació i per tant només es pot indicar que es tracta d'una escriptura d'atorgament del poder però no la subsistència del mateix.<br>- 0502: error realitzant la consulta. |
+| respostaConsultaSubsistenciaPoders/resultat/descripcio | Descripció del resultat. |
 
-#### 3.2.2.2Dades del subjecte
+#### 3.2.2.1 Dades del protocol <a name="3.2.2.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //idSubjecte
- | Identificador intern del subjecte. |
+| //protocol/csv  | Codi segur de verificació. |
+| //protocol/codiNotari | Codi identificador del notari. |
+| //protocol/notari | Dades del notari (NIF i nom i cognoms del notari). |
+| //protocol/codiNotaria | Codi identificador de la notaria. |
+| //protocol/notaria | Adreça de la notaria. |
+| //protocol/numProtocol | Número de protocol de l'escriptura. |
+| //protocol/numBis | Número bis del protocol. |
+| //protocol/dataAutoritzacio | Data d'autorització de l'escriptura (AAAA-MM-DD). |
+| //protocol/acteJuridic | Acte jurídic segons el Índice Único Informatizado del Consejo General del Notariado. |
+| //protocol/descripcioActeJuridic | Descripció de l'acte jurídic. |
+| //protocol/apoderats/apoderats | Bloc de dades amb dades d'apoderats. Vegeu apartat [3.2.2.1.](#3.2.2.1) |
+| //protocol/poderdants/poderdant | Bloc de dades amb dades de poderdants. Vegeu apartat [3.2.2.1.](#3.2.2.1)|
+
+#### 3.2.2.2 Dades del subjecte <a name="3.2.2.2"></a>
+
+| _Element_ | _Descripció_ |
 | --- | --- |
-| //documentIdentitat/tipus
- |
-- 1: NIF / CIF
-- 2: NIE
-- 3: Passaport
-- 4: Menors d'edat sense documentació
-- 5: Entitat recent constituïda sense NIF
-- 6: Manca d'aportació del NIF o NIF aportat però no vàlid
-- 7: Cònjuge co-titular que no intervé
-- 8: Document d'identificació d'estranger
-- 9: Document de persona jurídica estrangera
-- 10: Manca d'aportació de NIF o NIE
-- 11: Manca d'aportació de NIF
-- 12: Targeta de residència
-- 15: Document d'identificació diferent o absència de document
+| //idSubjecte  | Identificador intern del subjecte. |
+| //documentIdentitat/tipus |<br>- 1: NIF / CIF<br>- 2: NIE<br>- 3: Passaport<br>- 4: Menors d'edat sense documentació<br>- 5: Entitat recent constituïda sense NIF<br>- 6: Manca d'aportació del NIF o NIF aportat però no vàlid<br>- 7: Cònjuge co-titular que no intervé<br>- 8: Document d'identificació d'estranger<br>- 9: Document de persona jurídica estrangera<br>- 10: Manca d'aportació de NIF o NIE<br>- 11: Manca d'aportació de NIF<br>- 12: Targeta de residència<br>- 15: Document d'identificació diferent o absència de document |
+| //documentIdentitat | Número del document d'identitat. |
+| /circumstanciesAbsencia | Circumstàncies concretes concurrents de l'absència del document d'identitat. |
+| //documentIdentitat/numeroDocument | Número del document d'identitat. |
+| //nom | Nom. |
+| //cognom1RaoSocial | Primer cognom o raó social. |
+| //cognom2 | Segon cognom. |
+| //codiNacionalitat | Codi de país segons la codificació oficial de Països i Territoris aprovada per la OM 9-12-99. |
+| //nacionalitat | Nacionalitat. |
 
- |
-| //documentIdentitat
- | Número del document d'identitat. |
-| /circumstanciesAbsencia
- | Circumstàncies concretes concurrents de l'absència del document d'identitat. |
-| //documentIdentitat/numeroDocument
- | Número del document d'identitat. |
-| //nom
- | Nom. |
-| //cognom1RaoSocial
- | Primer cognom o raó social. |
-| //cognom2
- | Segon cognom. |
-| //codiNacionalitat
- | Codi de país segons la codificació oficial de Països i Territoris aprovada per la OM 9-12-99.
- |
-| //nacionalitat
- | Nacionalitat. |
+![6](captures/6.png)
 
-#### ![](RackMultipart20220923-1-5cgqng_html_19f3ad29e533b774.png)
-
-#### 3.2.2.3Descripció d'actes jurídics relatius a apoderaments
+#### 3.2.2.3 Descripció d'actes jurídics relatius a apoderaments
 
 | _Codi acte_ | _Descripció_ |
 | --- | --- |
 | 1401 | Poder general |
-| --- | --- |
 | 1402 | Poder electoral |
 | 1403 | Poder para pleitos |
 | 1404 | Sustitución de poder para pleitos |
@@ -494,129 +315,87 @@ Així, s'ha consultat un poder amb data d'autorització compresa entre l'1 de Ge
 | 1414 | Poder general mercantil |
 | 1415 | Poder de representación tributaria |
 
-## 3.3Consulta de subsistència de còpia simple de poder notarial (COPIA\_SIMPLE)
+## 3.3 Consulta de subsistència de còpia simple de poder notarial (COPIA\_SIMPLE) <a name="3.3"></a>
 
-### 3.3.1Petició – dades específiques
+### 3.3.1 Petició – dades específiques <a name="3.3.1"></a>
 
-![](RackMultipart20220923-1-5cgqng_html_fe01a020ff831c7f.png)
+![7](captures/7.png)
 
 | _Element_ | _Descripció_ |
 | --- | --- |
 | peticioConsultaCopiaSimple/apoderament/csv
- | CSV del poder notarial.
- |
-| --- | --- |
+ | CSV del poder notarial. |
 
-### 3.3.2Resposta – dades específiques
+
+### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
 | respostaConsultaCopiaSimple/resposta
  | Bloc de dades corresponent a la resposta a la consulta. |
-| --- | --- |
-| //resposta/protocol | Bloc de dades del protocol. Vegeu apartat 3.2.2.1.
- |
-| //resposta/document
- | Bloc de dades que conté la informació de l'escriptura digitalitzada. |
-| //document/data
- | Data del document (AAAA-MM-DD). |
-| //document/descripcio
- | Descripció lliure del document. |
-| //document/nom
- | Nom del document original. |
-| //document/grandaria
- | Grandària del document (Kb). |
-| //document/fitxer
- | Document PDF en Base64. |
-| //document/signatura
- | Signatura PKCS7 del document en Base64. |
-| respostaConsultaCopiaSimple/resultat/codiResultat | Codi de resultat de la consulta:
-- 0003: existeix el CSV indicat.
+| //resposta/protocol | Bloc de dades del protocol. Vegeu apartat [3.2.2.1.](#3.2.2.1) |
+| //resposta/document | Bloc de dades que conté la informació de l'escriptura digitalitzada. |
+| //document/data | Data del document (AAAA-MM-DD). |
+| //document/descripcio | Descripció lliure del document. |
+| //document/nom | Nom del document original. |
+| //document/grandaria | Grandària del document (Kb). |
+| //document/fitxer | Document PDF en Base64. |
+| //document/signatura | Signatura PKCS7 del document en Base64. |
+| respostaConsultaCopiaSimple/resultat/codiResultat | Codi de resultat de la consulta:<br>- 0003: existeix el CSV indicat.<br>- 11: error tècnic (inconsistència de dades al determinar la vigència).<br>- 12: el CSV indicat no correspon a cap còpia.<br>- 0502: error realitzant la consulta.<br> |
+| respostaConsultaCopiaSimple/resultat/descripcio | Descripció del resultat. |
 
+![8](captures/8.png)
 
-- 11: error tècnic (inconsistència de dades al determinar la vigència).
+## 3.4 Consulta de notaris i notaries (CONSULTA\_NOTARIS) <a name="3.4"></a>
 
-
-- 12: el CSV indicat no correspon a cap còpia.
-
-
-- 0502: error realitzant la consulta.
-
- |
-| respostaConsultaCopiaSimple/resultat/descripcio
- | Descripció del resultat. |
-
-![](RackMultipart20220923-1-5cgqng_html_869cac7f77b97ded.png)
-
-## 3.4Consulta de notaris i notaries (CONSULTA\_NOTARIS)
-
-### 3.4.1Petició – dades específiques
+### 3.4.1 Petició – dades específiques <a name="3.4.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| peticioConsultaNotaris/dataActe | Data aproximada de consulta en la que el notari consultat va exercir les seves funcions.
- |
-| --- | --- |
-| peticioConsultaNotaris/notaria/codiNotaria
- | Codi de cadastre que identifica la notaria. |
-| peticioConsultaNotaris/notaria/adreca
- | Adreça de la notaria. |
-| peticioConsultaNotaris/notaria/codiProvincia
- | Codi INE de la província de la notaria. |
-| peticioConsultaNotaris/notaria/codiMunicipi
- | Codi INE del municipi de la notaria. |
-| peticioConsultaNotaris/notaria/codiPostal
- | Codi postal de la notaria. |
-| peticioConsultaNotaris/notari/codiNotari
- | Codi identificatiu del notari. |
-| peticioConsultaNotaris/notari/cognom1
- | Primer cognom del notari. |
+| peticioConsultaNotaris/dataActe | Data aproximada de consulta en la que el notari consultat va exercir les seves funcions. |
+| peticioConsultaNotaris/notaria/codiNotaria | Codi de cadastre que identifica la notaria. |
+| peticioConsultaNotaris/notaria/adreca | Adreça de la notaria. |
+| peticioConsultaNotaris/notaria/codiProvincia | Codi INE de la província de la notaria. |
+| peticioConsultaNotaris/notaria/codiMunicipi | Codi INE del municipi de la notaria. |
+| peticioConsultaNotaris/notaria/codiPostal | Codi postal de la notaria. |
+| peticioConsultaNotaris/notari/codiNotari | Codi identificatiu del notari. |
+| peticioConsultaNotaris/notari/cognom1 | Primer cognom del notari. |
 
-![](RackMultipart20220923-1-5cgqng_html_55ad203eb52ce9d1.png)
+![9](captures/9.png)
 
-### 3.4.2Resposta – dades específiques
+### 3.4.2 Resposta – dades específiques <a name="3.4.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| respostaConsultaNotaris/notariNotaria
- | Bloc de dades corresponent a les dades d'un notari. |
-| --- | --- |
-| //notariNotaria/notari/codiNotari
- | Codi identificatiu del notari. |
-| //notariNotaria/notari/nif
- | Documentació del notari. |
-| //notariNotaria/notari/nom
- | Nom del notari. |
-| //notariNotaria/notari/cognoms
- | Cognoms del notari. |
-| //notariNotaria/dataInici
- | Data d'inici en la que el notari va començar a exercir les seves funcions a la notaria especificada (AAAA-MM-DD).
- |
-| //notariNotaria/dataFi
- | Darrera data en la que el notari va exercir les seves funcions a la notaria especificada (AAAA-MM-DD).
- |
-| //notariNotari/notaria/codiNotaria
- | Codi de cadastre que identifica la notaria. |
+| respostaConsultaNotaris/notariNotaria | Bloc de dades corresponent a les dades d'un notari. |
+| //notariNotaria/notari/codiNotari | Codi identificatiu del notari. |
+| //notariNotaria/notari/nif | Documentació del notari. |
+| //notariNotaria/notari/nom | Nom del notari. |
+| //notariNotaria/notari/cognoms | Cognoms del notari. |
+| //notariNotaria/dataInici | Data d'inici en la que el notari va començar a exercir les seves funcions a la notaria especificada (AAAA-MM-DD). |
+| //notariNotaria/dataFi | Darrera data en la que el notari va exercir les seves funcions a la notaria especificada (AAAA-MM-DD). |
+| //notariNotari/notaria/codiNotaria | Codi de cadastre que identifica la notaria. |
 | //notariNotari/notaria/unitatPoblacional | Descripció literal de la població o lloc on es troba la notaria. |
-| //notariNotari/notaria/adreca
- | Adreça. |
-| //notariNotari/notaria/provincia
- | Nom de la província. |
-| //notariNotari/notaria/codiProvincia
- | Codi INE de la província. |
-| //notariNotari/notaria/municipi
- | Municipi. |
-| //notariNotari/notaria/codiMunicipi
- | Codi INE del municipi. |
-| //notariNotari/notaria/codiPostal
- | Codi postal. |
-| //notariNotari/notaria/telefon1
- | Telèfon de contacte principal. |
-| //notariNotari/notaria/telefon2
- | Telèfon de contacte secundari. |
-| //notariNotari/notaria/fax
- | FAX. |
+| //notariNotari/notaria/adreca | Adreça. |
+| //notariNotari/notaria/provincia | Nom de la província. |
+| //notariNotari/notaria/codiProvincia | Codi INE de la província. |
+| //notariNotari/notaria/municipi | Municipi. |
+| //notariNotari/notaria/codiMunicipi | Codi INE del municipi. |
+| //notariNotari/notaria/codiPostal | Codi postal. |
+| //notariNotari/notaria/telefon1 | Telèfon de contacte principal. |
+| //notariNotari/notaria/telefon2 | Telèfon de contacte secundari. |
+| //notariNotari/notaria/fax | FAX. |
 
-![](RackMultipart20220923-1-5cgqng_html_a49cef8685fee527.png)
+![10](captures/10.png)
 
-[1](#sdfootnote1anc) Per consultar el llistat d'alertes als que s'està subscrit, cal accedir al servei "Avísame" del MINHAP: [https://avisame.redsara.es/gestorNotificaciones/services](https://avisame.redsara.es/gestorNotificaciones/services)
+
+
+## 3.5 Joc de proves <a name="3.5"></a>
+
+L'emissor final publica els següent [joc de proves a l'entorn de pre-producció][proves]
+ 
+[proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
+ 
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
+ 
+[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
