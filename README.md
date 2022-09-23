@@ -17,8 +17,8 @@
 | **A revisar per:** | Àrea de Tecnologia - Suport |
 | **A aprovar per:** | Àrea de Tecnologia - Suport |
 | **Llista de distribució:** |
- |
-| **Nom del document:** | RackMultipart20220923-1-5cgqng.doc |
+
+
 
 **Històric de revisions**
 
