@@ -59,6 +59,8 @@
 
        * [3.4.2 Resposta – dades específiques](#3.4.2)
 
+    * [3.5 Joc de proves](#3.5)
+
 # 1 Introducció <a name="1"></a>
 
 Aquest document detalla la missatgeria associada al servei de consulta d'informació del Registre Electrònic de Poders Notarials.
