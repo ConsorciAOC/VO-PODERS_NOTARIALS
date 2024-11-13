@@ -325,16 +325,14 @@ En el Índice Único Informatizado únicament es troben disponibles els poders a
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| peticioConsultaCopiaSimple/apoderament/csv
- | CSV del poder notarial. |
+| peticioConsultaCopiaSimple/apoderament/csv | CSV del poder notarial. |
 
 
 ### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| respostaConsultaCopiaSimple/resposta
- | Bloc de dades corresponent a la resposta a la consulta. |
+| respostaConsultaCopiaSimple/resposta | Bloc de dades corresponent a la resposta a la consulta. |
 | //resposta/protocol | Bloc de dades del protocol. Vegeu apartat [3.2.2.1.](#3.2.2.1) |
 | //resposta/document | Bloc de dades que conté la informació de l'escriptura digitalitzada. |
 | //document/data | Data del document (AAAA-MM-DD). |
